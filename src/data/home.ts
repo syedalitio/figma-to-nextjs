@@ -5,3 +5,17 @@ export const heroData = {
   imageSrc: "/images/hero-image.png",
   imageAlt: "Orthodontic treatment consultation",
 };
+
+export const brightHeroData = {
+  title: "Brilliant Smiles,\nExceptional Care",
+  subtitle:
+    "Your trusted Orthodontic choice across the North West\nEvery year we help 3000 people smile brighter",
+  ctaLabel: "FREE CONSULTATION",
+  ctaHref: "/contact",
+  heroImage: "/images/hero-person.png",
+  heroImageAlt: "Orthodontist smiling",
+  googleReview: {
+    rating: "5.0",
+    reviewCount: "336",
+  },
+};
