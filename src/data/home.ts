@@ -12,7 +12,7 @@ export const brightHeroData = {
     "Your trusted Orthodontic choice across the North West\nEvery year we help 3000 people smile brighter",
   ctaLabel: "FREE CONSULTATION",
   ctaHref: "/contact",
-  heroImage: "/images/hero-person.png",
+  heroImage: "/images/hero-person-final.png",
   heroImageAlt: "Orthodontist smiling",
   googleReview: {
     rating: "5.0",

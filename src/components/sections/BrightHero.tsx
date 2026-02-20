@@ -110,26 +110,37 @@ export function BrightHero({
           />
         </div>
 
-        {/* ===== Hero image (person) ===== */}
-        <div className="relative mx-auto mb-8 mt-8 aspect-[704/832] w-[280px] sm:w-[340px] md:w-[400px] lg:absolute lg:right-[264px] lg:top-[24px] lg:mb-0 lg:mt-0 lg:w-[500px] xl:w-[560px]">
+        {/* ===== Hero image — person cutout directly on top of blobs ===== */}
+        <div className="relative z-[5] mx-auto mb-8 mt-8 aspect-[704/833] w-[280px] sm:w-[340px] md:w-[400px] lg:absolute lg:right-[264px] lg:top-[24px] lg:mb-0 lg:mt-0 lg:w-[704px]">
           <Image
             src={heroImage}
             alt={heroImageAlt}
             fill
             className="object-contain"
             priority
-            sizes="(max-width: 639px) 280px, (max-width: 767px) 340px, (max-width: 1023px) 400px, 560px"
+            sizes="(max-width: 639px) 280px, (max-width: 767px) 340px, (max-width: 1023px) 400px, 704px"
           />
         </div>
 
         {/* ===== Text content ===== */}
         <div className="relative z-10 px-6 pb-12 sm:px-12 lg:px-0 lg:pb-0">
           <div className="mx-auto max-w-lg text-center lg:mx-0 lg:ml-[308px] lg:max-w-[528px] lg:pt-[369px] lg:text-left">
-            <h1 className="text-3xl font-semibold leading-[1.2] tracking-[-0.03em] text-[#333] sm:text-4xl lg:text-[48px]">
-              {title}
+            <h1 className="text-3xl leading-[1.2] tracking-[-0.03em] text-[#333] sm:text-4xl lg:text-[48px]">
+              {title.split("\n").map((line, i) =>
+                i === 0 ? (
+                  <span key={i} className="font-light">
+                    {line}
+                    <br />
+                  </span>
+                ) : (
+                  <span key={i} className="font-bold">
+                    {line}
+                  </span>
+                )
+              )}
             </h1>
 
-            <p className="mt-6 text-base font-medium leading-[1.4] tracking-[-0.03em] text-[#333] sm:text-lg lg:text-xl">
+            <p className="mt-6 text-base font-medium leading-[1.4] tracking-[-0.03em] text-[#555] sm:text-lg lg:text-xl">
               {subtitle}
             </p>
 

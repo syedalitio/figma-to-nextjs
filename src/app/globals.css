@@ -2,10 +2,13 @@
 
 @theme inline {
   --color-navy: #1D2E54;
+  --color-navy-dark: #131E39;
   --color-gray-heading: #777777;
   --color-white: #FFFFFF;
+  --color-teal: #2EB2A4;
 
   --font-heading: "Canela", "Georgia", "Times New Roman", serif;
+  --font-outfit: var(--font-outfit), "Outfit", sans-serif;
 }
 
 body {
